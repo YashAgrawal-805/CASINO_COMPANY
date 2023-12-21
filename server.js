@@ -8,7 +8,7 @@ const popup = require('node-popup');
 
 const app = express();
 const emailToken = Math.random().toString(36).substring(2,7);
-const url = "http://localhost:3000/" + emailToken
+const url = "https://the-casino.onrender.com/" + emailToken
 
 // Set the view engine
 app.set("view engine", "ejs");
