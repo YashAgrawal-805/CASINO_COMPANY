@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/lock.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../stylesheets/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="selector">
+            <li class="signup" style="background-color: rgb(238, 255, 0,0.3);"><a href="#signup">SIGNUP</a></li>
+            <li class="login"><a href="#login">LOGIN</a></li>
+        </div>
+        <div class="box">
+            <form action="/signup" id="signup-form" method="post">
+                <div class="fname item"><i class="gg-user"></i><input name= "fname" type="text" placeholder="Firstname*"></div>
+                <div class="lname item"><i class="gg-user"></i><input name= "lname" type="text" placeholder="Lastname*"></div>
+                <div class="Email item"><i class="gg-mail"></i><input name= "Email" type="text" placeholder="Email*"></div>
+                <div class="password item"><i class="gg-lock"></i><input name= "password" type="text" placeholder="Password*"></div>
+                <button class="getstarted item">GET STARTED</button>
+            </form>
+            <form action="/login" id="login-form" method="post">
+                <div class="Email item"><i class="gg-user"></i><input name= "Email" type="text" placeholder="Email*"></div>
+                <div class="password item"><i class="gg-lock"></i><input name= "password" type="text" placeholder="Password*"></div>
+                <button class="welcome item">WELCOME BACK</button>
+            </form>
+        </div>
+    </div>
+<script src="../javascript/login.js"></script>
+</body>
+</html>

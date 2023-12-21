@@ -1,0 +1,231 @@
+body{
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: 100vw,100vh;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    width:  0em;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+*{
+    margin: 0px;
+    padding: 0px;  
+}
+.body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: rgb(207, 176, 0);
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 100vw;  
+}
+.gg-lock{
+    position:relative;
+    bottom: -5px;
+    left: -20px;
+}
+.navoptions{
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.navmenu{
+    margin-right: 20px;
+    height: 2px;
+    width: 20px;
+    background-color: rgba(0, 0, 0);
+}
+.MENU{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.555);
+    color: rgb(0, 0, 0);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    top: -215px;
+}
+.submenu{
+    margin-top: 10px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+.submenu>a{
+    color: #000000;
+    text-decoration: none;
+}
+.SHIFTEFMENU{
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.555);
+    color: rgb(0, 0, 0);
+    padding-top: 30px;
+    position: absolute;
+    top: 0px;
+}
+.cross {
+    margin-right: 10px;
+    margin-top: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(0, 0, 0);
+}
+
+.leg1, .leg2 {
+    margin: auto;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+.leg1 {
+    transform: rotate(-45deg);
+    translate: 7.5px;
+}
+
+.leg2 {
+    transform: rotate(45deg);
+    translate: -7.5px;
+}
+.king{
+    display: flex;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    .submenu{
+        margin-inline:20px;
+    }
+    .cross{
+        height: 0;
+        width: 0;
+    }
+}
+.main{
+    padding: 2vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.part{
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    height: 40vw;
+    background-color: rgba(0, 255, 255, 0);
+    flex-grow: 1;
+    margin: 20px;
+}
+.part>img{
+    border-radius: 10px;
+    border-style: double;
+    box-shadow: 10px 10px 10px rgb(189, 166, 39);
+    border-width: 3px;
+    border-color: rgb(255, 225, 55);
+}
+.parth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 40vw;
+    background-color: rgba(0, 255, 255, 0);
+    flex-grow: 1;
+    margin: 20px;
+    color: rgb(255, 225, 55);
+}
+.main>img{
+    width: 100vw;
+}
+.container{
+    padding: 2vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: 30vw;
+    background-color: #11111100;
+    margin: 20px;
+    flex-grow: 1;
+    border-radius: 20%;
+}
+.item>img{
+        border-radius: 10%;
+        border-style: double;
+        border-width: 3px;
+        border-color: gold;
+}
+.hr{
+    border-right-width: 10vw;
+    border-style:solid;
+    border-left-width: 10vw;
+    border-radius: 20px;
+    width: 80vw;
+    height: 2px;
+    background-color: rgb(255, 225, 55);
+    color: rgb(0, 0, 0);
+}
+@media (max-width:717px) {
+    .part{
+        display: flex;
+        justify-content: center;
+        width: 80vw;
+        height: 80vw;
+        background-color: rgba(0, 255, 255, 0);
+        flex-grow: 1;
+        margin: 20px;
+    }
+    .item{
+        display: flex;
+        justify-content: center;
+        width: 80vw;
+        height: 80vw;
+        background-color: rgb(0, 0, 0);
+        flex-grow: 1;
+        margin: 20px;
+    }
+    .item>img{
+        border-radius: 10%;
+        border-style: double;
+        border-width: 3px;
+        border-color: gold;
+        flex-grow: 1;
+    }
+}
+

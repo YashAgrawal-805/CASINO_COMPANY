@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            width: 100vw;
+        }
+        .outline{
+            background-color: gold;
+            margin: auto;
+            padding: 20px;
+            border-style: double;
+            border-color: rgb(0, 0, 0);
+            border-width: 6px;
+            border-radius: 25px;
+            box-shadow: 5px 5px 5px;
+            
+        }
+        h1{
+            color: rgb(0, 0, 0);
+        }
+        .box{
+            display: flex;
+            margin-top: 50px;
+        }
+        .checkbox{
+            appearance: none;
+        }
+        .checkmark{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+            background-color: rgb(255, 255, 255);
+            margin-right: 20px;
+            border-radius: 20px;
+            border-style: solid;
+            font-size: 40px;
+            box-shadow: 2px px 2px;
+        }
+        .tick{
+            display: none;
+            color: rgb(0, 0, 0);
+        }
+        .checkmark:hover{
+            cursor: pointer;
+        }
+        .button{
+            border-radius: 20px;
+            width: 150px;
+            font-size: larger;
+            font-weight: bolder;
+            box-shadow: 3px 3px 2px;
+        }
+        .heading{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    .
+    <div class="outline">
+        <center><h1>VERIFICATION</h1></center>
+        <div class="container">
+            <form action="/registered">
+                <div class="box">
+                    <input type="checkbox" class="checkbox">
+                    <div class="checkmark"><span class="tick">&#10003;</span></div>
+                    <button class="button" role="button">VERIFY</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        var checkmark = document.querySelector(".checkmark");
+        var checkbox = document.querySelector(".checkbox");
+
+        checkmark.addEventListener("click", function () {
+            if (!checkbox.checked) {
+                checkbox.checked = true;
+                checkmark.querySelector(".tick").style.display = "block";
+                checkmark.style.backgroundColor = "";
+
+            } else {
+                checkbox.checked = false;
+                checkmark.querySelector(".tick").style.display = "none";
+                checkmark.style.backgroundColor = "white";
+            }
+        });
+    </script>
+</body>
+</html>

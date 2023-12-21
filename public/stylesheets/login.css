@@ -1,0 +1,144 @@
+:root{
+    --pixels: 400px
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: var(--pixels);
+    height: auto;
+    border-style: solid;
+    border-radius: calc(0.05 * var(--pixels));
+}
+
+.selector {
+    display: flex;
+    margin-inline: auto;
+    width: calc(0.75 * var(--pixels));
+    height:  calc(0.125* var(--pixels));
+    background-color: rgba(255, 255, 255, 0);
+    border-radius:  calc(0.0375 * var(--pixels));
+    margin-top:  calc(0.1* var(--pixels));
+    margin-bottom:  calc(0.1 * var(--pixels));
+    border-style: solid;
+
+}
+
+.selector>li {
+    display: flex;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius:  calc( 0.0375* var(--pixels));
+}
+
+.selector>li>a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.signup {
+    background-color: rgb(238, 255, 0,0.3);
+}
+
+.box {
+    width:  calc(0.75* var(--pixels));
+    margin-bottom: 40px;
+    border-radius: 15px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:  calc( 0.1 * var(--pixels));
+    margin-bottom:  calc(0.05 * var(--pixels));
+}
+
+.item>input {
+    background-color: rgba(240, 248, 255, 0);
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-width: 0px;
+    border-bottom:  calc( 0.005* var(--pixels));
+    border-style: solid;
+    font-size: larger;
+}
+.item>input::placeholder{
+    color: black;
+    
+}
+.gg-user {
+    margin-right:  calc(0.0375 * var(--pixels));
+}
+
+.gg-mail {
+    margin-right:  calc(0.0375  * var(--pixels));
+}
+
+.gg-lock {
+    margin-right:  calc(0.0375 * var(--pixels));
+}
+
+.getstarted {
+    border: none;
+    background-color: rgba(238, 255, 0, 0.3);
+    border-radius:  calc(0.025 * var(--pixels));
+    font-weight: bolder;
+    font-size: large;
+    border-style: solid
+}
+
+#login-form {
+    display: none;
+}
+
+.welcome {
+    border: none;
+    background-color: rgb(238, 255, 0,0.3);
+    border-radius:  calc(0.025 * var(--pixels));
+    font-weight: bolder;
+    font-size: large;
+    border-style: solid
+}
+
+.password {
+    margin-bottom:  calc(0.125 * var(--pixels));
+}
+@media (max-width:500px) {
+    :root{
+    --pixels: 280px
+}
+}
+@media (max-height:375px) {
+    body {
+    background-image: url("background.jpg");
+    background-size: auto,375px;
+    background-position: center;
+    }
+}
