@@ -146,7 +146,8 @@ app.post('/login', async (req, res) => {
     }
 
     // Compare the provided password with the stored hash
-    const passwordMatch = await bcrypt.compare(password, user.password);
+    const passwordMatch = await bcrypt.compare(password, user.Password);
+
 
     if (passwordMatch) {
       // Passwords match, user is authenticated
