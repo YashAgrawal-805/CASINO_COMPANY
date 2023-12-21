@@ -32,7 +32,7 @@ async function sendEmail(email, url) {
                 user: 'comp.casino@gmail.com',
                 pass: 'vdnf zhoy ritj jtnq'
                 },
-            debug: true
+            debug: true,
         });
 
         const mailOptions = {
