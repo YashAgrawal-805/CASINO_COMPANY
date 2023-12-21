@@ -132,18 +132,33 @@ app.post("/signup", async function (req, res) {
     });
 
 // Route to handle login form submission
-app.post("/login", async function (req, res) {
-    var email = req.body.Email;
-    var password = req.body.password;
-    const user = await Users.findOne({ Email: email ,password: password});
+app.post('/login', async (req, res) => {
+  const email = req.body.Email;
+  const password = req.body.password;
+
+  try {
+    // Find the user by email
+    const user = await Users.findOne({ Email: email });
 
     if (!user) {
-        res.render("Relogin");
+      // User not found
+      return res.render("Relogin");
     }
-    else{
-        res.render("index", { a: user.Firstname.toUpperCase()});
-        console.log(email);
+
+    // Compare the provided password with the stored hash
+    const passwordMatch = await bcrypt.compare(password, user.password);
+
+    if (passwordMatch) {
+      // Passwords match, user is authenticated
+      return res.render("index", { a: user.Firstname.toUpperCase() });
+    } else {
+      // Passwords do not match
+      return res.render("Relogin");
     }
+  } catch (error) {
+    console.error('Error during login:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 // Start the server
