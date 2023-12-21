@@ -31,7 +31,8 @@ async function sendEmail(email, url) {
             auth: {
                 user: 'comp.casino@gmail.com',
                 pass: 'vdnf zhoy ritj jtnq'
-                }
+                },
+            debug: true
         });
 
         const mailOptions = {
